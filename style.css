@@ -1,0 +1,300 @@
+@import url("https://use.typekit.net/por6dge.css");
+/*-------------navigatie--------------*/
+* {
+    margin: 0;
+    font-family: "quiverleaf-cf", sans-serif;
+    color: #000000;
+}
+
+p {
+    font-family: "inter-variable", sans-serif;
+}
+
+header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  padding-top: 0.5em;
+  z-index: 1000; /* <- voeg dit toe */
+}
+
+nav ul {
+  list-style: none;
+  padding: 1em 3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+nav ul a {
+    text-decoration: none; /* Verwijdert de onderstreep */
+    font-weight: 600;
+    font-size: 2em;
+  }
+
+  nav ul a:hover {
+    color: #e74ad2;
+  }
+   
+
+/*-------------boven de vouw--------------*/
+
+.bovendevouw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    height: 500px;
+    background: url("./images/achtergrond.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .proef-natuur .bovendevouw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem;
+    height: 500px;
+    background: url("./images/proefnatuur_groot.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .proef-natuur .intro-text {
+    grid-column: 1;
+  }
+
+  .proef-natuur .terug-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 3rem; /* Verhoogt de tekstgrootte */
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .proef-natuur .terug-link img {
+    height: 3rem; /* Verhoog deze waarde om de pijl groter te maken */
+  }
+  
+
+    
+  .about-text {
+    color: black;
+  }
+  
+  .about-text h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+  }
+  
+  .about-text h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+  
+  .about-photo img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .bovendevouw h1 {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    align-self: end;
+    font-weight: 700;
+    font-size: 7rem; /* ← groter dan 5rem */
+    margin: 0;
+  }
+  
+  .bovendevouw h2 {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    font-weight: 100;
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .bovendevouw h3 {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    justify-self: end;
+    align-self: end;
+    font-weight: 100;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .terug-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+  }
+  .terug-link img {
+    height: 1.2em;
+  }
+  
+/*-------------onder de vouw--------------*/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .overlay-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .overlay-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+  }
+  
+  .overlay-text {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .overlay-container:hover .overlay {
+    opacity: 1;
+  }
+  
+
+
+  h4 {
+    text-align: center;
+    padding: 2rem 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+.vaardigheden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; /* ← dit centreert het blok */
+}
+
+  
+  .vaardigheden img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .timeline {
+    max-width: 700px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+  
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 220px;
+    bottom: 0;
+    left: 70px; /* of pas dit aan op basis van je icoonbreedte */
+    width: 4px;
+    background: #000;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .timeline-item img {
+    width: 70px;
+    height: 70px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 4px black;
+    flex-shrink: 0;
+  }
+  
+  .timeline-content {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+  }
+  
+  footer .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+  }
+  
+  footer .contact-info img {
+    height: 50px;
+  }
+  
+  footer .contact-info span {
+    font-size: 1rem;
+    color: white;
+    font-family: "inter-variable", sans-serif;
+  }
+  
