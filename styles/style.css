@@ -135,7 +135,12 @@ nav a:focus {
 /***************************************************************************************************/
 
 
-.index .hero {
+/* ================= HERO SECTION ================= */
+
+
+
+/* Homepage */
+main.index > section:first-of-type {
   min-height: 65vh;
   background: url("../images/achtergrond.jpg") center / cover no-repeat;
   display: grid;
@@ -143,11 +148,11 @@ nav a:focus {
   text-align: center;
   margin: 0;
   padding: 0;
-  width: 100%; /* ✅ vervangt 100vw */
+  width: 100%;
   box-sizing: border-box;
 }
 
-.index .hero h1 {
+h1 {
   line-height: 1.1;
   font-weight: 800;
   font-size: clamp(5rem, 6vw, 10rem);
@@ -155,13 +160,169 @@ nav a:focus {
   letter-spacing: 0.02em;
 }
 
-.index .hero h1 span {
+h1 span {
   display: block;
   font-weight: 500;
   font-size: 0.5em;
   padding-top: 2em;
   text-transform: uppercase;
 }
+
+
+.about_me {
+  min-height: 65vh;
+  background: url("../images/achtergrond.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  text-align: left;
+  margin: 0;
+  padding: 80px 10%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* Foto rechts */
+.about_me img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsief */
+@media (max-width: 900px) {
+  .about_me {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about_me img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
+
+
+/* Proef natuur */
+.proef_natuur .hero {
+  min-height: 65vh;
+  background: url("../images/proefnatuur.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cocktailbar */
+.cocktailbar .hero {
+  min-height: 65vh;
+  background: url("../images/cocktailbar.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Nijntje */
+.nijntje .hero {
+  min-height: 65vh;
+  background: url("../images/nijntje.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Protest */
+.protest .hero {
+  min-height: 65vh;
+  background: url("../images/poster_protest.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Javascript */
+.javascript .hero {
+  min-height: 65vh;
+  background: url("../images/javascript.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Oude kerk */
+.oudekerk .hero {
+  min-height: 65vh;
+  background: url("../images/deoudekerk.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* The School */
+.the_school .hero {
+  min-height: 65vh;
+  background: url("../images/deschool.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Olie boek */
+.olie_boek .hero {
+  min-height: 65vh;
+  background: url("../images/ollie_boek.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Studenten box */
+.studenten_box .hero {
+  min-height: 65vh;
+  background: url("../images/the_studentenbox.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Tuktuktalk */
+.tuktuktalk .hero {
+  min-height: 65vh;
+  background: url("../images/tuktuktalk.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Stripverhaal */
+.stripverhaal .hero {
+  min-height: 65vh;
+  background: url("../images/strip_verhaal.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Menu kaart */
+.menu_kaart .hero {
+  min-height: 65vh;
+  background: url("../images/menu_kaart.jpg") center / cover no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+
+
+
 
 
 
@@ -188,7 +349,7 @@ h2 {
   display: none;
 }
 
-main.index a {
+main.index a:not(:has(img)) {
   background-color: var(--kleur-hoofd);
   padding: 0.5em;
   color: var(--kleur-tekst);
